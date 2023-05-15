@@ -23,6 +23,10 @@ export default {
       },
       fontFamily: {
         sans: [  'Josefin Sans', 'sans-serif' ]
+      },
+      backgroundImage: {
+        'hero-desktop': "url('./assets/imagens/photo/hero-desktop.jpg')",
+        'hero-mobile': "url('./assets/imagens/photo/hero-mobile.jpg')"
       }
     },
   },
