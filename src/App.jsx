@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import Header from './assets/components/layout/Header'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>hello</h1>
+     <Header />
     </>
   )
 }
