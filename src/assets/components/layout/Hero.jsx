@@ -8,11 +8,11 @@ Hero.propTypes = {
   
 };
 
-function Hero(props) {
+function Hero( props ) {
 
   const [ width, setWidth ] = useState(window.innerWidth);
 
-  const mobileImage = <MobileComponent src={"src/assets/imagens/photo/hero-mobile.jpg"} alt={"woman"} />;
+  const mobileImage = <MobileComponent  src={"src/assets/imagens/photo/hero-mobile.jpg"} alt={"woman"} />;
   const desktopImage =  <DesktopComponent src={"src/assets/imagens/photo/hero-desktop.jpg"} alt={"woman"} />;
 
   const breakPoint = 640;
