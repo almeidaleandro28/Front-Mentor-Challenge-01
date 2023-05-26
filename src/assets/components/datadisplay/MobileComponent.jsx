@@ -8,7 +8,7 @@ MobileComponent.propTypes = {
 
 function MobileComponent({ src, alt}) {
   return (
-    <img src={ src } alt={ alt } />
+    <img className='w-full' src={ src } alt={ alt } />
   );
 }
 
