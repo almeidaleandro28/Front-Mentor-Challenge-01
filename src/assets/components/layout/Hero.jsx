@@ -25,7 +25,7 @@ function Hero( props ) {
 
   
   return (
-    <section className=''>
+    <section className='md:col-span-2 md:row-span-3'>
       {showImage}
     </section>  
   );
