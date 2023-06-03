@@ -7,7 +7,7 @@ Footer.propTypes = {
 
 function Footer(props) {
   return (
-    <footer className='md:row-span-4'>
+    <footer className='md:row-span-4 bg-pink-200 '>
       <div className="container mx-auto px-4 py-4 text-center">
         
         <header className='mb-2 mt-8'>
