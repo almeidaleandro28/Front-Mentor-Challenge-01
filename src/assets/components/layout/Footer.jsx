@@ -26,7 +26,7 @@ function Footer(props) {
         </section>
 
         <footer className='flex w-4/5 mx-auto relative'>
-            <input className='w-full  border-pink-700 border-2 rounded-xl relative py-2'
+            <input className='w-full  border-pink-700 border-2 rounded-xl relative py-2 placeholder:text-pink-400 placeholder:pl-2'
                type="email" 
                placeholder='email address' />
             <div className='h-full bg-pink-300 rounded-xl absolute right-0 flex items-center'>
