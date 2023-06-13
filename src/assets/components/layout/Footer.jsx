@@ -42,7 +42,9 @@ function Footer(props) {
 
             <input className='w-full border-pink-300 border-2 rounded-xl relative py-2 
               placeholder:text-pink-400 placeholder:pl-2
-              active:border-red-600 hover:border-red-600'
+              active:border-red-600
+              hover:border-red-600
+              focus:border-red-600'
               type="email" 
               placeholder='email address'
               value={ email }
@@ -53,7 +55,8 @@ function Footer(props) {
             <button className='h-full bg-pink-400 rounded-xl absolute right-0 flex items-center pl-8 pr-8 
               cursor-pointer
               focus:bg-pink-300
-              hover:scale-x-150 hover:bg-pink-300 active:scale-x-150 active:bg-pink-300' 
+              hover:scale-x-150 hover:bg-pink-300 
+              active:scale-x-150 active:bg-pink-300' 
               onClick={ handlerValidation }>
               <svg xmlns="http://www.w3.org/2000/svg" 
                 width="16" 
