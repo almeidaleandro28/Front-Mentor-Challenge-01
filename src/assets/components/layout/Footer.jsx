@@ -1,5 +1,24 @@
+import { useEffect, useState } from "react";
+import regexEmail from '../../util/Regex.jsx'
 
 function Footer(props) {
+
+  const [ emailErr, setEmailErr ] = useState( null );
+  const [ email, setEmail ] = useState('');
+
+  const isValidEmail = ( email ) => {
+    return regexEmail.test( email )
+  }
+
+  const handlerValidation = ( e ) => {
+    if ( !isValidEmail( email ) ){
+      setEmailErr(true)
+    } else {
+      setEmailErr(false)
+    }
+ }
+
+
   return (
     <footer className='md:row-span-4 bg-pink-200 '>
       <div className="container mx-auto px-4 py-4 text-center">
@@ -20,13 +39,22 @@ function Footer(props) {
         </section>
 
         <footer className='flex w-4/5 mx-auto relative'>
+
             <input className='w-full border-pink-300 border-2 rounded-xl relative py-2 
               placeholder:text-pink-400 placeholder:pl-2
               active:border-red-600 hover:border-red-600'
               type="email" 
-              placeholder='email address' />
-            <div className='h-full bg-pink-400 rounded-xl absolute right-0 flex items-center pl-8 pr-8 
-              hover:scale-x-150 hover:bg-pink-300 active:scale-x-150 active:bg-pink-300'>
+              placeholder='email address'
+              value={ email }
+              onChange={ ( e ) => setEmail( e.target.value ) }
+              />
+              
+
+            <button className='h-full bg-pink-400 rounded-xl absolute right-0 flex items-center pl-8 pr-8 
+              cursor-pointer
+              focus:bg-pink-300
+              hover:scale-x-150 hover:bg-pink-300 active:scale-x-150 active:bg-pink-300' 
+              onClick={ handlerValidation }>
               <svg xmlns="http://www.w3.org/2000/svg" 
                 width="16" 
                 height="16" 
@@ -37,9 +65,12 @@ function Footer(props) {
                  1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 
                  5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
               </svg>
-            </div>
+            </button>
+            
         </footer>
-
+        <div>
+          { emailErr && <span className="text-pink-400">please provider a valid email!</span> }
+        </div>
       </div>
     </footer>
   );
